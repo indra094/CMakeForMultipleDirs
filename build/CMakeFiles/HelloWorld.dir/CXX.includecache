@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/indra094/Documents/Proj/hw/Folder1/header1.h
+
+C:/Users/indra094/Documents/Proj/hw/Folder2/header2.h
+
+C:/Users/indra094/Documents/Proj/hw/main.cpp
+iostream
+-
+Folder1/header1.h
+C:/Users/indra094/Documents/Proj/hw/Folder1/header1.h
+Folder2/header2.h
+C:/Users/indra094/Documents/Proj/hw/Folder2/header2.h
+

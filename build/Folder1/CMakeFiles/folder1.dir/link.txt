@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libfolder1.a CMakeFiles/folder1.dir/source1.cpp.obj
+C:\MinGW\bin\ranlib.exe libfolder1.a
