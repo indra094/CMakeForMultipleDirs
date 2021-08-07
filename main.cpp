@@ -4,6 +4,7 @@
 #include <iterator>
 #include <algorithm>
 #include <boost/lambda/lambda.hpp>
+#include "boost/filesystem.hpp"
 #include "Folder1/header1.h"
 #include "Folder2/header2.h"
 
@@ -12,12 +13,13 @@ using namespace std;
 void createFile(string filePath)
 {
    std::ofstream file(filePath);
+
    file.close();
 }
 
 void createDirectory(string dirName)
 {
-   //boost::filesystem::create_directory(dirName);
+   boost::filesystem::create_directory(dirName);
    using namespace boost::lambda;
    typedef std::istream_iterator<int> in;
 
