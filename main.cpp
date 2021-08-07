@@ -1,10 +1,28 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <iterator>
+#include <algorithm>
+#include <boost/lambda/lambda.hpp>
 #include "Folder1/header1.h"
 #include "Folder2/header2.h"
 
 using namespace std;
+
+void createFile(string filePath)
+{
+   std::ofstream file(filePath);
+   file.close();
+}
+
+void createDirectory(string dirName)
+{
+   //boost::filesystem::create_directory(dirName);
+   using namespace boost::lambda;
+   typedef std::istream_iterator<int> in;
+
+   std::for_each(in(std::cin), in(), std::cout << (_1 * 3) << " " );
+}
 
 int main()
 {
@@ -55,6 +73,8 @@ int main()
 	ofstream out_file("../main.cpp");
 	out_file<<contentStream.str()+"boomchika";
 	out_file.close();*/
+
+	createDirectory("TestDir");
 
 	return 0;
 }
