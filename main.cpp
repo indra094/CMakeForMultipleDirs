@@ -13,7 +13,6 @@ using namespace std;
 void createFile(string filePath)
 {
    std::ofstream file(filePath);
-
    file.close();
 }
 

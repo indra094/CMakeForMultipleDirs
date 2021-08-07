@@ -18,6 +18,6 @@ add_subdirectory("Folder2")
 
 add_executable("${PROJECT_NAME}" ${SOURCE_FILES})
 
-target_link_libraries("${PROJECT_NAME}" PRIVATE "folder1" "folder2" "C:/Boost/boost_1_76_0/stage/lib/libboost_filesystem-mgw9-mt-d-x32-1_76.a")
+target_link_libraries("${PROJECT_NAME}" PRIVATE "folder1" "folder2" "${BOOST_ROOT}/stage/lib/libboost_filesystem-mgw9-mt-d-x32-1_76.a")
 
 target_include_directories("${PROJECT_NAME}" PUBLIC "Folder1" "Folder2")
